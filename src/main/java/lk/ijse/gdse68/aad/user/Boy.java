@@ -13,8 +13,14 @@ public class Boy {
      //good girl type eke ekk inject krnwa //
     @Qualifier("Swit smile") //ek saman bean dekk tiyenm eken ekk inject krnn use krnwa
 
+//field injection = null ekk enne nattm use krnn puluwan
+    // bean ekkt wada wadiy tiyenm ekyi ekk use krnn puluwan
+    //1, @primary annotation using priority
+    //2. @Qualifier = string ekk widiyat collification ekk dal ek tiyen ekkenwa gnn puluwan
+    //3. @Wow -@Retention(RetentionPolicy.RUNTIME) // annotation ek koyi welawed ayin wenn one kiyl //
+    //bean eke constructor eken passe tamyi ek ganne
 
-    //=========constructor injection===========
+    //=========constructor injection=========== initialize kral
   //  private final GoodGirl goodGirl;
    // @Wow
     //@Autowired
@@ -23,7 +29,8 @@ public class Boy {
 
    // }
 
-    //=========setter  injection=========
+    //=========setter  injection=========value ek set kral
+    // inject krnne interface type ekk tiyenm ekt  inject ek awashya kenat inject wenawa
       private  GoodGirl goodGirl;
      @Wow
     @Autowired
