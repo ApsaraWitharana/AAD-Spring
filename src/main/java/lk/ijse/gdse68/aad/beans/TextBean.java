@@ -12,22 +12,22 @@ public class TextBean implements BeanNameAware, BeanFactoryAware, ApplicationCon
 
     @Override
     public void setBeanName(String name) { //
-        System.out.println("Bean name is "+name);
+        //System.out.println("Bean name is "+name);
     }
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("Bean Factory is "+ beanFactory);
+       // System.out.println("Bean Factory is "+ beanFactory);
     }
 
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("going");
+        //System.out.println("going");
     }
 
     @PreDestroy
     public void  customerDestroyTest(){
-        System.out.println("man ynoo with customer destroy"); // lastly check krgnn mek spring Destroy ekk newe
+       // System.out.println("man ynoo with customer destroy"); // lastly check krgnn mek spring Destroy ekk newe
 
         //PreDestroy vs Destroy = close weddi resource cline krgnn use we. //
         // reader/db connection close krgnn spring framework work eke hammen Destroy ek nanntm custom eke hamben PreDestroy
@@ -35,11 +35,11 @@ public class TextBean implements BeanNameAware, BeanFactoryAware, ApplicationCon
     }
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("ITS 2024 -adad");
+        //System.out.println("ITS 2024 -adad");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("applicationContext is "+ applicationContext);
+        //System.out.println("applicationContext is "+ applicationContext);
     }
 }
