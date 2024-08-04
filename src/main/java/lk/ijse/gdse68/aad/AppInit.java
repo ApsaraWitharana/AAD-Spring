@@ -10,5 +10,8 @@ public class AppInit {
         ctx.register(Config.class); //derect class dnne object danne wada krn ewa tik // e class hoyagnn use krnne register(); =>> config class ->>source for bean definition //2 work 1.  register(); 2, application class ekt ynn kamati class config krnwa
         ctx.refresh(); // aluthen register una ewa blgnn
         ctx.close(); //closing
+
+
+        Spring Core - Process of IOC and related matters
     }
 }
