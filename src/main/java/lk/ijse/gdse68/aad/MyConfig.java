@@ -1,4 +1,4 @@
-package org.example;
+package lk.ijse.gdse68.aad;
 
 import org.springframework.stereotype.Component;
 
