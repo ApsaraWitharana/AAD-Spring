@@ -14,13 +14,21 @@ public class Boy {
     @Qualifier("Swit smile") //ek saman bean dekk tiyenm eken ekk inject krnn use krnwa
 
 
-    //constructor injection
-    private final GoodGirl goodGirl;
-    @Wow
-    @Autowired
-    public Boy( GoodGirl goodGirl) {
-        this.goodGirl=goodGirl;
+    //=========constructor injection===========
+  //  private final GoodGirl goodGirl;
+   // @Wow
+    //@Autowired
+    //public Boy( GoodGirl goodGirl) {
+    //    this.goodGirl=goodGirl;
 
+   // }
+
+    //=========setter  injection=========
+      private  GoodGirl goodGirl;
+     @Wow
+    @Autowired
+    public void setGoodGirl(GoodGirl goodGirl){
+        this.goodGirl=goodGirl;
     }
 
     @PostConstruct //JAVA EE dependency injection eke inject una
