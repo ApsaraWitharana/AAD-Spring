@@ -10,17 +10,24 @@ import org.springframework.stereotype.Component;
 @Component
 
 public class Boy {
-    @Autowired //good girl type eke ekk inject krnwa
+     //good girl type eke ekk inject krnwa //
     @Qualifier("Swit smile") //ek saman bean dekk tiyenm eken ekk inject krnn use krnwa
-    @Wow
-    private GoodGirl goodGirl;
-//    public Till() {
-//        System.out.println(goodGirl);
-//    }
 
-    @PostConstruct
+
+    //constructor injection
+    private final GoodGirl goodGirl;
+    @Wow
+    @Autowired
+    public Boy( GoodGirl goodGirl) {
+        this.goodGirl=goodGirl;
+
+    }
+
+    @PostConstruct //JAVA EE dependency injection eke inject una
     public void init(){
         //System.out.println(goodGirl);
         goodGirl.love(); // interface eke tiyen abstract method ek invoke wenne
     }
 }
+
+//DI - counteracted

@@ -16,3 +16,4 @@ public class Config {
         // bean vs component => ym kisi ob ekk spring wisin manage krnn sudusuyi kiyl == bean ** source code nati class ekk bean ekk widiyt dagnn one nam ek bean annotation use krnwa
     }
 }
+
