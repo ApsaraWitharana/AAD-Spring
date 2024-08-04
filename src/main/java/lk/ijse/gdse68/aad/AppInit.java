@@ -11,13 +11,18 @@ public class AppInit {
 //        ctx=nameing conversion
         ctx.register(Config.class); //derect class dnne object danne wada krn ewa tik // e class hoyagnn use krnne register(); =>> config class ->>source for bean definition //2 work 1.  register(); 2, application class ekt ynn kamati class config krnwa
         ctx.refresh(); // aluthen register una ewa blgnn
-        ctx.close(); //closing
+//        ctx.close(); //closing
+        ctx.registerShutdownHook();//gratefully shutdown
+        //inter bean dependency ek mode ekk thaw mode ekk mt depend wen ek= full mode //light mode eke na
+
 
 //source for bean definition ==>> kohomd beans hadagnne kiyla
         // main component 3- web /core/ data
         // awam ek core ek
         // full mode - features wadi ganak dagnn full mode configuration class ekk atule krn cofig
         // light mode -
+
+//        DI =>>Dependency injection aims to separate the concerns of constructing objects and using them, leading to loosely coupled programs.[1][2][3] The pattern ensures that an object or function that wants to use a given service should not have to know how to construct those services. Instea
 
     }
 }

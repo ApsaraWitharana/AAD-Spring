@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class MyConfig {
     MyConfig(){
 
-        System.out.println("Hellow Myconfig");
+//        System.out.println("Hellow Myconfig");
 
     }
 }
