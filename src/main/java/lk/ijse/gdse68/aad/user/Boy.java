@@ -5,6 +5,7 @@ import lk.ijse.gdse68.aad.dep.GoodGirl;
 import lk.ijse.gdse68.aad.dep.Wow;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -42,6 +43,13 @@ public class Boy {
     public void init(){
         //System.out.println(goodGirl);
         goodGirl.love(); // interface eke tiyen abstract method ek invoke wenne
+    }
+
+  //  @Autowired(required = false) // sout prite wenne
+    //Autowired use kral method ekk coll kragnn puluwan parameterize method but note using this //**
+    @Autowired
+    public void myMethod(@Nullable System name){
+        System.out.println(name);
     }
 }
 
