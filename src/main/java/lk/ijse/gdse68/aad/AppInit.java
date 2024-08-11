@@ -1,7 +1,11 @@
 package lk.ijse.gdse68.aad;
 
+import lk.ijse.gdse68.aad.beans.TextBean;
 import lk.ijse.gdse68.aad.config.Config;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.w3c.dom.Text;
 
 
 //Spring Core - Process of IOC and related matters
@@ -12,6 +16,13 @@ public class AppInit {
         ctx.register(Config.class); //derect class dnne object danne wada krn ewa tik // e class hoyagnn use krnne register(); =>> config class ->>source for bean definition //2 work 1.  register(); 2, application class ekt ynn kamati class config krnwa
         ctx.refresh(); // aluthen register una ewa blgnn
 //        ctx.close(); //closing
+        //scope
+        //q-01.interview what is spring bean life circle
+        TextBean test = (TextBean) ctx.getBean("test");
+        ConfigurableBeanFactory beanFactory = ctx.getBeanFactory();// this is legacy //bean factory ekt wadiy application context wadi kral hadapu ekk tamyi application context
+        boolean isSingletonTest = beanFactory.isSingleton("test");
+        System.out.println(test);
+        System.out.println("Is test singleton: "+isSingletonTest);
         ctx.registerShutdownHook();//gratefully shutdown
         //inter bean dependency ek mode ekk thaw mode ekk mt depend wen ek= full mode //light mode eke na
 
