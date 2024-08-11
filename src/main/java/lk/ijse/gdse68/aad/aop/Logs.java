@@ -20,3 +20,6 @@ public class Logs {
         System.out.println("Logs for Transaction end");
     }
 }
+
+//core,web,data
+//core ek tmyi use kre where minimum ek awam sudusu kam
